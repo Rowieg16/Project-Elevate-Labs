@@ -1,0 +1,9 @@
+type,severity,ip,detail,first_seen,last_seen,count,log_type
+Path Scanning,HIGH,10.0.0.77,40 unique 404 paths probed,2024-06-01 05:00:00,2024-06-01 05:01:18,40,apache
+High Error Rate,MEDIUM,10.0.0.77,100% error rate over 40 requests,2024-06-01 05:00:00,2024-06-01 05:01:18,40,apache
+Brute Force (HTTP),HIGH,172.16.0.55,50 failed login attempts on protected path,2024-06-01 10:00:00,2024-06-01 10:03:16,50,apache
+High Error Rate,MEDIUM,172.16.0.55,100% error rate over 50 requests,2024-06-01 10:00:00,2024-06-01 10:03:16,50,apache
+Brute Force (HTTP),HIGH,185.220.101.5,15 failed login attempts on protected path,2024-06-01 08:00:00,2024-06-01 08:02:20,15,apache
+Blacklisted IP,CRITICAL,185.220.101.5,IP matches known malicious network. 15 requests.,2024-06-01 08:00:00,2024-06-01 08:02:20,15,apache
+DoS/Flooding,CRITICAL,192.168.99.200,600 requests in 5 min window,2024-06-01 02:00:00,2024-06-01 02:02:59,600,apache
+SSH Scanning,HIGH,10.10.10.99,30 rapid disconnects (user enumeration likely),2026-06-01 01:00:00,2026-06-01 01:02:25,30,ssh

@@ -1,0 +1,86 @@
+{
+  "generated": "2026-05-20 08:37:04.081149",
+  "total": 8,
+  "alerts": [
+    {
+      "type": "Path Scanning",
+      "severity": "HIGH",
+      "ip": "10.0.0.77",
+      "detail": "40 unique 404 paths probed",
+      "first_seen": "2024-06-01 05:00:00",
+      "last_seen": "2024-06-01 05:01:18",
+      "count": 40,
+      "log_type": "apache"
+    },
+    {
+      "type": "High Error Rate",
+      "severity": "MEDIUM",
+      "ip": "10.0.0.77",
+      "detail": "100% error rate over 40 requests",
+      "first_seen": "2024-06-01 05:00:00",
+      "last_seen": "2024-06-01 05:01:18",
+      "count": 40,
+      "log_type": "apache"
+    },
+    {
+      "type": "Brute Force (HTTP)",
+      "severity": "HIGH",
+      "ip": "172.16.0.55",
+      "detail": "50 failed login attempts on protected path",
+      "first_seen": "2024-06-01 10:00:00",
+      "last_seen": "2024-06-01 10:03:16",
+      "count": 50,
+      "log_type": "apache"
+    },
+    {
+      "type": "High Error Rate",
+      "severity": "MEDIUM",
+      "ip": "172.16.0.55",
+      "detail": "100% error rate over 50 requests",
+      "first_seen": "2024-06-01 10:00:00",
+      "last_seen": "2024-06-01 10:03:16",
+      "count": 50,
+      "log_type": "apache"
+    },
+    {
+      "type": "Brute Force (HTTP)",
+      "severity": "HIGH",
+      "ip": "185.220.101.5",
+      "detail": "15 failed login attempts on protected path",
+      "first_seen": "2024-06-01 08:00:00",
+      "last_seen": "2024-06-01 08:02:20",
+      "count": 15,
+      "log_type": "apache"
+    },
+    {
+      "type": "Blacklisted IP",
+      "severity": "CRITICAL",
+      "ip": "185.220.101.5",
+      "detail": "IP matches known malicious network. 15 requests.",
+      "first_seen": "2024-06-01 08:00:00",
+      "last_seen": "2024-06-01 08:02:20",
+      "count": 15,
+      "log_type": "apache"
+    },
+    {
+      "type": "DoS/Flooding",
+      "severity": "CRITICAL",
+      "ip": "192.168.99.200",
+      "detail": "600 requests in 5 min window",
+      "first_seen": "2024-06-01 02:00:00",
+      "last_seen": "2024-06-01 02:02:59",
+      "count": 600,
+      "log_type": "apache"
+    },
+    {
+      "type": "SSH Scanning",
+      "severity": "HIGH",
+      "ip": "10.10.10.99",
+      "detail": "30 rapid disconnects (user enumeration likely)",
+      "first_seen": "2026-06-01 01:00:00",
+      "last_seen": "2026-06-01 01:02:25",
+      "count": 30,
+      "log_type": "ssh"
+    }
+  ]
+}

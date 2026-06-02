@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intrusion Detection Report</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#0d1117;color:#c9d1d9;padding:24px}
+  h1{font-size:1.8em;margin-bottom:4px;color:#f0f6fc}
+  .sub{color:#8b949e;font-size:.9em;margin-bottom:24px}
+  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px 20px;min-width:140px}
+  .card-title{font-size:.75em;text-transform:uppercase;letter-spacing:.05em;color:#8b949e;margin-bottom:4px}
+  .card-val{font-size:1.8em;font-weight:700;color:#f0f6fc}
+  table{width:100%;border-collapse:collapse;background:#161b22;border-radius:8px;overflow:hidden}
+  th{background:#21262d;color:#8b949e;font-size:.78em;text-transform:uppercase;letter-spacing:.05em;padding:10px 12px;text-align:left}
+  td{padding:10px 12px;border-top:1px solid #21262d;font-size:.87em;vertical-align:top}
+  tr:hover td{background:#1c2128}
+  .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.78em;font-weight:700;letter-spacing:.05em}
+  code{background:#21262d;padding:1px 5px;border-radius:3px;font-family:monospace;font-size:.9em}
+</style>
+</head>
+<body>
+<h1>🛡 Intrusion Detection Report</h1>
+<div class="sub">Generated: 2026-05-20 08:37:04 &nbsp;|&nbsp; Total alerts: <strong>8</strong></div>
+<div class="stats"><div class="card"><div class="card-title">Total Alerts</div><div class="card-val">8</div></div><div class="card"><div class="card-title">CRITICAL</div><div class="card-val">2</div></div><div class="card"><div class="card-title">HIGH</div><div class="card-val">4</div></div><div class="card"><div class="card-title">MEDIUM</div><div class="card-val">2</div></div><div class="card"><div class="card-title">Apache Records</div><div class="card-val">1005</div></div><div class="card"><div class="card-title">SSH Records</div><div class="card-val">50</div></div><div class="card"><div class="card-title">Unique IPs</div><div class="card-val">24</div></div></div>
+<table>
+  <thead><tr>
+    <th>Severity</th><th>Threat Type</th><th>IP Address</th><th>Detail</th>
+    <th>Count</th><th>First Seen</th><th>Last Seen</th><th>Source</th>
+  </tr></thead>
+  <tbody>
+        <tr>
+          <td><span class="badge" style="background:#c0392b;color:#fff">CRITICAL</span></td>
+          <td>Blacklisted IP</td>
+          <td><code>185.220.101.5</code></td>
+          <td>IP matches known malicious network. 15 requests.</td>
+          <td>15</td>
+          <td>2024-06-01 08:00:00</td>
+          <td>2024-06-01 08:02:20</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#c0392b;color:#fff">CRITICAL</span></td>
+          <td>DoS/Flooding</td>
+          <td><code>192.168.99.200</code></td>
+          <td>600 requests in 5 min window</td>
+          <td>600</td>
+          <td>2024-06-01 02:00:00</td>
+          <td>2024-06-01 02:02:59</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#d35400;color:#fff">HIGH</span></td>
+          <td>Path Scanning</td>
+          <td><code>10.0.0.77</code></td>
+          <td>40 unique 404 paths probed</td>
+          <td>40</td>
+          <td>2024-06-01 05:00:00</td>
+          <td>2024-06-01 05:01:18</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#d35400;color:#fff">HIGH</span></td>
+          <td>Brute Force (HTTP)</td>
+          <td><code>172.16.0.55</code></td>
+          <td>50 failed login attempts on protected path</td>
+          <td>50</td>
+          <td>2024-06-01 10:00:00</td>
+          <td>2024-06-01 10:03:16</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#d35400;color:#fff">HIGH</span></td>
+          <td>Brute Force (HTTP)</td>
+          <td><code>185.220.101.5</code></td>
+          <td>15 failed login attempts on protected path</td>
+          <td>15</td>
+          <td>2024-06-01 08:00:00</td>
+          <td>2024-06-01 08:02:20</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#d35400;color:#fff">HIGH</span></td>
+          <td>SSH Scanning</td>
+          <td><code>10.10.10.99</code></td>
+          <td>30 rapid disconnects (user enumeration likely)</td>
+          <td>30</td>
+          <td>2026-06-01 01:00:00</td>
+          <td>2026-06-01 01:02:25</td>
+          <td>SSH</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#f39c12;color:#000">MEDIUM</span></td>
+          <td>High Error Rate</td>
+          <td><code>10.0.0.77</code></td>
+          <td>100% error rate over 40 requests</td>
+          <td>40</td>
+          <td>2024-06-01 05:00:00</td>
+          <td>2024-06-01 05:01:18</td>
+          <td>APACHE</td>
+        </tr>
+        <tr>
+          <td><span class="badge" style="background:#f39c12;color:#000">MEDIUM</span></td>
+          <td>High Error Rate</td>
+          <td><code>172.16.0.55</code></td>
+          <td>100% error rate over 50 requests</td>
+          <td>50</td>
+          <td>2024-06-01 10:00:00</td>
+          <td>2024-06-01 10:03:16</td>
+          <td>APACHE</td>
+        </tr></tbody>
+</table>
+</body></html>
