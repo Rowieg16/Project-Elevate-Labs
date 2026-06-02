@@ -47,38 +47,7 @@ HIGH       SSH Scanning          10.10.10.99      30 disconnects
 
 ## Usage
 
-### Demo mode (no real logs needed)
-```bash
-python log_analyzer.py --demo
-```
-
-### Real Apache log
-```bash
-python log_analyzer.py --apache /var/log/apache2/access.log
-```
-
-### Real SSH log
-```bash
-python log_analyzer.py --ssh /var/log/auth.log
-```
-
-### Both together
-```bash
-python log_analyzer.py --apache /var/log/apache2/access.log --ssh /var/log/auth.log
-```
-
-### With a custom IP blacklist
-```bash
-python log_analyzer.py --apache access.log --blacklist my_blacklist.txt
-```
-
-> Blacklist file format: one IP or CIDR range per line, e.g. `192.168.1.5` or `10.0.0.0/8`
-
-### Custom output directory
-```bash
-python log_analyzer.py --demo --outdir /tmp/my_report
-```
-
+python log_analyzer.py --apache apache.log
 ---
 
 ## Output
